@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/your_BMI_is"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/your_BMI_is"
+        android:textAlignment="center"
+        android:textColor="@color/sanonimous_blue_600"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textview_result_BMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textAlignment="center"
+        android:textSize="27sp"
+        tools:text="numero bmi" />
+
+    <TextView
+        android:id="@+id/textview_classification_BMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:text="Classification" />
+
+
+
+
+    <TextView
+        android:id="@+id/textview_classification_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:padding="2dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="Classifications" />
+
+    <TextView
+        android:id="@+id/textview_classifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:padding="2dp"
+        android:textAlignment="center"
+        android:textSize="23sp"
+        android:visibility="visible"
+        tools:text="Underweight\nNormal weight\nOverweight\nObese\nDangerously" />
+    />
+
+</LinearLayout>
