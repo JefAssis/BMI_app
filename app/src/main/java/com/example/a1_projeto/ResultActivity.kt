@@ -10,11 +10,12 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
+        setSupportActionBar(findViewById(R.id.toolbar))
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val tv_result_BMI = findViewById<TextView>(R.id.textview_result_BMI)
-        val tv_classification_BMI = findViewById<TextView>(R.id.textview_classification_BMI)
+        val tv_result_BMI = findViewById<TextView>(R.id.tv_result_BMI)
+        val tv_classification_BMI = findViewById<TextView>(R.id.tv_classification_BMI)
 
         val result = intent.getFloatExtra("EXTRA_RESULT", 0.1f)
 
@@ -34,7 +35,8 @@ class ResultActivity : AppCompatActivity() {
              "Dangerously Obese!"
         }
 
-        tv_classification_BMI.text = getString(R.string.message_classification, classification)
+        tv_classification_BMI.text = classification
+            //getString(R.string.message_classification, classification)
 
     }
 

@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">BMI Calcultor</string>
-    <string name="your_BMI_is">Your BMI is:</string>
-    <string name="message_classification">Classification: %1$s </string>
+    <string name="BMI">Your BMI is:</string>
+    <string name="message_classification"> %1$s </string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="gender">Gender</string>
+    <string name="weight">Weight</string>
+    <string name="type_it_here">Type it here</string>
+    <string name="height">Height</string>
+    <string name="calculate_your_bmi">Calculate you BMI</string>
 
 </resources>
