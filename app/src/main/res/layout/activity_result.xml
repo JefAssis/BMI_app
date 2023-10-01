@@ -6,19 +6,29 @@
     android:layout_height="match_parent"
     android:background="?attr/colorOnPrimary"
     android:orientation="vertical"
-    tools:context=".ResultActivity">
+    tools:context="com.bmi_express.myapp.ResultActivity">
 
-    <LinearLayout
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main"
+        ></include>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:background="?attr/colorOnPrimary"
-        android:orientation="vertical">
-
-        <include layout="@layout/toolbar_main"></include>
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_top"
+        >
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cv_classification"
             style="@style/Cards1"
-            android:layout_gravity="center">
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="32dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -36,57 +46,112 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
                     tools:text="Classification" />
 
                 <TextView
                     android:id="@+id/your_BMI_is"
                     style="@style/Title1"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
                     android:text="@string/BMI"
-
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/tv_result_BMI"
+                    app:layout_constraintEnd_toStartOf="@id/tv_result_BMI"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp"/>
 
                 <TextView
                     android:id="@+id/tv_result_BMI"
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
                     android:maxLength="5"
 
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/your_BMI_is"
+                    app:layout_constraintStart_toEndOf="@id/your_BMI_is"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="BMI_n" />
+                    tools:text="BMI_n"
+                    android:layout_marginTop="8dp"/>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-
-    </LinearLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="?attr/colorOnPrimary"
-        >
-
-        <androidx.cardview.widget.CardView
-         style="@style/Cards2">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/card_bottom"
+                android:layout_marginTop="60dp">
 
-        </androidx.cardview.widget.CardView>
-    </ScrollView>
+                <TextView
+                    android:id="@+id/general_classification"
+                    style="@style/Title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Classification"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    style="@style/Title2"
+                    />
+
+
+                <TextView
+                    style="@style/Title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Underweight 0 - 18"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    style="@style/Title3"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Healthy 18 - 24" />
+
+                <TextView
+                    style="@style/Title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:layout_gravity="center"
+                    android:text="Overweight 25 - 29"
+
+                    />
+
+                <TextView
+                    style="@style/Title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:layout_gravity="center"
+                    android:text="Obese 30 - 39"
+                    />
+
+                <TextView
+                    style="@style/Title3"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Extremely Obese 40 - 40+"
+                    android:layout_marginBottom="16dp"
+                    />
+
+            </LinearLayout>
+
+
 </LinearLayout>

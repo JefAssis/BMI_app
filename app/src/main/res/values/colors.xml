@@ -1,35 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue_900">#0a257a</color>
-    <color name="blue_800">#1b378f</color>
-    //main
-    <color name="blue_600">#2e4aa7</color>
-    <color name="blue_500">#3452b1</color>
-    <color name="blue_400">#556cbc</color>
-    <color name="blue_300">#7486c7</color>
-    <color name="blue_100">#c3cae7</color>
-    <color name="blue_50">#e7eaf5</color>
-
-    //main
-    <color name="magenta_900">#880061</color>
-    <color name="magenta_800">#b1006a</color>
-    <color name="magenta_400">#ee0290</color>
-    <color name="magenta_300">#ef4fa6</color>
-    <color name="magenta_100">#f5b6da</color>
-    <color name="magenta_50">#fae4fc</color>
-
-    <color name="yellow_800">#a78b2e</color>
-    <color name="yellow_500">#dfc63c</color>
-    <color name="yellow_400">#e5cd57</color>
-    <color name="yellow_100">#f7ecc1</color>
-    <color name="yellow_50">#fcf8e6</color>
-
-    <color name="green_700">#00b900</color>
-    <color name="green_500">#00de00</color>
-    <color name="green_300">#02ee60</color>
-    <color name="green_100">#b8f8bf</color>
-    <color name="green_50">#e2fde5</color>
+    <color name="green_grey">#000700</color>
+    <color name="green_1000">#011A00</color>#445246
+    <color name="green_900">#445246</color>
+    <color name="green_800">#517357</color>
+    <color name="green_600">#62966d</color>
+    <color name="green_500">#6ba578</color>
+    <color name="green_400">#7db28a</color>
+    <color name="green_300">#92bf9d</color>
+    <color name="green_200">#afd0b8</color>
+    <color name="green_100">#cde2d3</color>
+    <color name="green_50">#eaf3ed</color>
 
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+
+
 </resources>

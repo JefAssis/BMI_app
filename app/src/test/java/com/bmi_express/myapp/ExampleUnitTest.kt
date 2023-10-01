@@ -1,4 +1,4 @@
-package com.example.a1_projeto
+package com.bmi_express.myapp
 
 import org.junit.Test
 

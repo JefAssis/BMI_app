@@ -7,19 +7,20 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="BMI Calculator"
+        android:label="BMI Express"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.1_Projeto"
         tools:targetApi="31"
+        android:configChanges="locale"
         >
         <activity
-            android:name=".ResultActivity"
-            android:parentActivityName=".MainActivity"
+            android:name="com.bmi_express.myapp.ResultActivity"
+            android:parentActivityName="com.bmi_express.myapp.MainActivity"
             android:label=""/>
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.bmi_express.myapp.MainActivity"
             android:exported="true"
             android:label="BMI Calculator">
             <intent-filter>

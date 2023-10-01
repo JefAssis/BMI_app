@@ -1,9 +1,10 @@
-package com.example.a1_projeto
+package com.bmi_express.myapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
+import com.example.a1_projeto.R
 
 class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class ResultActivity : AppCompatActivity() {
         tv_result_BMI.text = result.toString()
 
 
-        var classification =
+        val classification =
         if (result < 18.5f){
              "Underweight"
         }else if(result in 18.5f..24.9f) {
@@ -35,8 +36,7 @@ class ResultActivity : AppCompatActivity() {
              "Dangerously Obese!"
         }
 
-        tv_classification_BMI.text = classification
-            //getString(R.string.message_classification, classification)
+        tv_classification_BMI.text = getString(R.string.message_classification)
 
     }
 

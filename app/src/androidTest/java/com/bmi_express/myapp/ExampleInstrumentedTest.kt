@@ -1,4 +1,4 @@
-package com.example.a1_projeto
+package com.bmi_express.myapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
