@@ -16,16 +16,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-
-        //window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         setSupportActionBar(findViewById(R.id.toolbar))
         val btnCalculator: Button = findViewById(R.id.calculator)
         val edtWeightBMI: EditText = findViewById(R.id.weight_for_BMI)
         val edtHeightBMI: EditText = findViewById(R.id.height_for_BMI)
 
-        btnCalculator . setOnClickListener {
+        btnCalculator.setOnClickListener {
             val heightStr = edtHeightBMI.text.toString()
             val weightStr = edtWeightBMI.text.toString()
             if (heightStr.isNotEmpty() && weightStr.isNotEmpty()) {
@@ -48,17 +45,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    //------
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater: MenuInflater = menuInflater
-        return true
-    }
-
-    fun OnDefaultToggleClick(view: View) {
-        Toast.makeText(
-            this, "DefaultToggle", Toast.LENGTH_SHORT
-        ).show()
-    }
 
 }
