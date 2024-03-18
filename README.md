@@ -11,7 +11,8 @@ The app automatically computes the BMI based on the entered data.
 The BMI is categorized into standard classifications (Underweight, Normal Weight, Overweight, and Obesity) according to established health guidelines.
 ## Future Features
 - BMI history
-- Tab for tips, concerning the user's BMI and API for healthy recipes
+- Tips concerning the user's BMI
+- API for healthy recipes
 
 ## Installation 
 to install the BMI Express you can copy its repository to Android Studio and test it. 
