@@ -1,52 +1,91 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Base.Theme._1_Projeto" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/green_500</item>
-        <item name="colorPrimaryVariant">@color/green_50</item>
-        <item name="colorOnPrimary">@color/green_100</item>
-        <item name="colorSecondary">@color/green_500</item>
-        <item name="colorSecondaryVariant">@color/green_800</item>
+        <item name="colorPrimary">@color/orange_500</item>
+        <item name="colorPrimaryVariant">@color/purple_50</item>
+        <item name="colorOnPrimary">@color/yellow_50</item>
+        <item name="colorSecondary">@color/yellow_600</item>
+        <item name="colorSecondaryVariant">@color/orange_400</item>
         <item name="colorOnSecondary">@color/white</item>
-        <item name="android:statusBarColor">?attr/colorSecondary</item>
-        <item name="android:navigationBarColor">?attr/colorSecondary</item>
+        <item name="android:statusBarColor">?attr/colorSecondaryVariant</item>
+        <item name="android:navigationBarColor">?attr/colorOnSecondary</item>
     </style>
 
     <style name="Theme.1_Projeto" parent="Base.Theme._1_Projeto" />
 
-    <style name="EditsText1" parent="Widget.AppCompat.EditText">
-        <item name="android:textColor">@color/green_500</item>
-        <item name="android:textColorHint">@color/green_500</item>
+    <style name="TextInputLayout1" parent="Widget.Design.TextInputLayout">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxCornerRadiusBottomEnd">25sp</item>
+        <item name="boxCornerRadiusBottomStart">25sp</item>
+        <item name="boxCornerRadiusTopEnd">25sp</item>
+        <item name="boxCornerRadiusTopStart">25sp</item>
+        <item name="android:textColorHint">?attr/colorPrimary</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="Title1" parent="Widget.AppCompat.TextView">
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="fontFamily">@font/dm_sans_medium</item>
-        <item name="android:textColor">@color/green_500</item>
+        <item name="android:textColor">@color/purple_500</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Title2" parent="Widget.AppCompat.TextView">
+    <style name="TitleLight1" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">25sp</item>
         <item name="fontFamily">@font/dm_sans_medium</item>
         <item name="android:textColor">@color/green_300</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Title3" parent="Widget.AppCompat.TextView">
+    <style name="TitleLight2" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">25sp</item>
         <item name="fontFamily">@font/dm_sans_medium</item>
-        <item name="android:textColor">@color/green_50</item>
+        <item name="android:textColor">@color/yellow_50</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitleLight4" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">45sp</item>
+        <item name="fontFamily">@font/dm_sans_medium</item>
+        <item name="android:textColor">@color/yellow_50</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitleLight3" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/dm_sans_medium</item>
+        <item name="android:textColor">@color/purple_50</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ButtonText" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">25sp</item>
+        <item name="fontFamily">@font/dm_sans_medium</item>
+        <item name="android:textColor">@color/green_800</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitleText" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">25sp</item>
+        <item name="fontFamily">@font/dm_sans_medium</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Cards1" parent="CardView">
-        <item name="cardCornerRadius">45dp</item>
+        <item name="cardCornerRadius">30dp</item>
         <item name="android:layout_width">320dp</item>
         <item name="android:layout_height">100dp</item>
         <item name="elevation">40dp</item>
-        <item name="android:backgroundTint">@color/green_50</item>
+        <item name="android:backgroundTint">?attr/colorPrimaryVariant</item>
         <item name="android:layout_marginTop">16dp</item>
     </style>
 
+    <style name="BottomNav" parent="Widget.Design.BottomNavigationView">
+        <item name="android:topLeftRadius">45dp</item>
+        <item name="android:topRightRadius">45dp</item>
+        <item name="itemIconTint">?attr/colorPrimaryVariant</item>
+        <item name="itemTextColor">?attr/colorPrimaryVariant</item>
+    </style>
 
 </resources>

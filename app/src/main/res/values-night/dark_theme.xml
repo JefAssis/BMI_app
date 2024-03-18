@@ -1,10 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme._1_Projeto" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/green_800</item>
-        <item name="colorPrimaryVariant">@color/green_50</item>
+        <item name="colorPrimaryVariant">@color/purple_50</item>
         <item name="colorOnPrimary">@color/green_grey</item>
         <item name="colorSecondary">@color/green_1000</item>
-        <item name="colorSecondaryVariant">@color/green_50</item>
+        <item name="colorSecondaryVariant">@color/purple_50</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="android:statusBarColor">?attr/colorSecondary</item>
         <item name="android:navigationBarColor">?attr/colorSecondary</item>
@@ -24,14 +24,14 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Title2" parent="Widget.AppCompat.TextView">
+    <style name="TitleLight1" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">25sp</item>
         <item name="fontFamily">@font/dm_sans_medium</item>
         <item name="android:textColor">@color/green_300</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Title3" parent="Widget.AppCompat.TextView">
+    <style name="TitleLight2" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">23sp</item>
         <item name="fontFamily">@font/dm_sans_medium</item>
         <item name="android:textColor">@color/green_200</item>

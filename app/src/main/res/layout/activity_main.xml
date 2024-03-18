@@ -1,109 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorOnPrimary"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context="com.bmi_express.myapp.MainActivity">
 
     <include
         android:id="@+id/toolbar_main"
-        layout="@layout/toolbar_main" />
-
-    <LinearLayout
+        layout="@layout/toolbar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/card_top"
-        android:orientation="vertical">
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_weight"
-            style="@style/Cards1"
-            android:layout_gravity="center">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/weight_for_BMI"
-                    style="@style/EditsText1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="32dp"
-                    android:hint="@string/type_it_here_1"
-                    android:inputType="numberDecimal"
-                    android:maxLength="6"
-                    android:textAlignment="center"
-                    android:textSize="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.504" />
-                <TextView
-                    android:id="@+id/tv_weight"
-                    style="@style/Title1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="160dp"
-                    android:text="@string/weight"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutResultDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_height"
-            style="@style/Cards1"
-            android:layout_gravity="center"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="32dp">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/height_for_BMI"
-                    style="@style/EditsText1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="32dp"
-                    android:hint="@string/type_it_here_2"
-                    android:inputType="numberDecimal"
-                    android:maxLength="6"
-                    android:textAlignment="center"
-                    android:textSize="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/textView"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.504" />
-                <TextView
-                    android:id="@+id/textView"
-                    style="@style/Title1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="160dp"
-                    android:text="@string/height"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayoutResultDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/card_down2"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_main">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TitleLight4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="18.50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/TitleLight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classification"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TILheight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        android:textColorHint="@color/yellow_50"
+        app:boxBackgroundColor="?attr/colorSecondary"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutHeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextHeight"
+            style="@style/Title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/type_it_here_2"
+            android:inputType="numberDecimal"
+            android:maxLength="6">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/card_down2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TILheight">
+
+        <TextView
+            android:id="@+id/tvHeight"
+            style="@style/TitleLight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:padding="10dp"
+            android:text="@string/height" />
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TILweight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        android:textColorHint="@color/yellow_50"
+        app:boxBackgroundColor="?attr/colorSecondary"
+        app:boxCornerRadiusTopEnd="30dp"
+        app:boxCornerRadiusTopStart="30dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayoutWeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutHeight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextWeight"
+            style="@style/Title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/type_it_here_1"
+            android:inputType="numberDecimal"
+            android:maxLength="6">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/card_down2"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TILweight">
+
+        <TextView
+            android:id="@+id/tv_weight"
+            style="@style/TitleLight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:padding="10dp"
+            android:text="@string/weight" />
+
     </LinearLayout>
 
     <Button
-        android:id="@+id/calculator"
-        style="@style/Title3"
+        android:id="@+id/calculateButton"
+        style="@style/TitleLight3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/button_rounded_1"
-        android:elevation="20dp"
-        android:text="@string/calculate_your_bmi" />
-</LinearLayout>
+        android:padding="20dp"
+        android:text="@string/calculate_bmi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutWeight" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

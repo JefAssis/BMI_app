@@ -1,49 +1,30 @@
 package com.bmi_express.myapp
-
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.View
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import com.example.a1_projeto.R
+import com.google.android.material.textfield.TextInputEditText
 
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setSupportActionBar(findViewById(R.id.toolbar))
-        val btnCalculator: Button = findViewById(R.id.calculator)
-        val edtWeightBMI: EditText = findViewById(R.id.weight_for_BMI)
-        val edtHeightBMI: EditText = findViewById(R.id.height_for_BMI)
+        val editTextHeight = findViewById<TextInputEditText>(R.id.editTextHeight)
+        val editTextWeight = findViewById<TextInputEditText>(R.id.editTextWeight)
 
-        btnCalculator.setOnClickListener {
-            val heightStr = edtHeightBMI.text.toString()
-            val weightStr = edtWeightBMI.text.toString()
-            if (heightStr.isNotEmpty() && weightStr.isNotEmpty()) {
+        val calculateButton = findViewById<Button>(R.id.calculateButton)
 
-                val height: Float = heightStr.toFloat()
-                val finalHeight: Float = height * height
-
-                val weight: Float = weightStr.toFloat()
-                val result: Float = weight / finalHeight
+        calculateButton.setOnClickListener{
+            val weight = editTextWeight.text
+            val height = editTextHeight.text
 
 
-                val intent = Intent(this, ResultActivity::class.java)
-                    .apply {
-                        putExtra("EXTRA_RESULT", result)
-                    }
-                startActivity(intent)
-            } else {
-                Toast.makeText(this, "Fill up all the the boxes", Toast.LENGTH_LONG).show()
-            }
+
         }
+
+
     }
-
-
 }
